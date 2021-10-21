@@ -4,7 +4,7 @@ const main = (async () => {
   const octokit = new Octokit({
     auth: process.env.GITHUB_TOKEN
   });
-  const data = await github.pulls.create({
+  const data = await octokit.rest.pulls.create({
     owner: process.env.REPO_OWNER,
     repo: process.env.REPO_NAME,
     head: process.env.HEAD_BRANCH,
