@@ -11,6 +11,7 @@ const main = (async () => {
     base: process.env.BASE_BRANCH,
     title: process.env.PR_TITLE
   });
+  console.log(data)
   console.log(`PR_NUMBER=${data.number}`)
 })();
 
